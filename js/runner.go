@@ -359,6 +359,7 @@ func (r *Runner) GetOptions() lib.Options {
 // IsExecutable returns whether the given name is an exported and
 // executable function in the script.
 func (r *Runner) IsExecutable(name string) bool {
+	fmt.Println(name)
 	_, exists := r.Bundle.callableExports[name]
 	return exists
 }
